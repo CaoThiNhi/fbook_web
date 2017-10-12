@@ -93,10 +93,6 @@
     padding: 60px;
 }
 
-.fix {
-    overflow: hidden;
-}
-
 .text-white {
     color: #ffffff !important;
 }
@@ -812,4 +808,11 @@
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+}
+.styleA{
+    color: #767021;
+}
+
+.menu-tip li a:hover{
+    color:#e3ac07;
 }

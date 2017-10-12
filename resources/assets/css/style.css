@@ -229,3 +229,7 @@ input:-webkit-autofill:focus {
 .notification-p {
     margin-bottom: 0px;
 }
+.avatar{
+    width: 60px;
+    border-radius: 50%;
+}

@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6{
     font-size: 13px;
 }
 .button_style{
-    padding-top: 60px;
+    padding-top: 65px;
     float: right;
     padding-right: 25px;
 }
@@ -97,4 +97,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .book-content{
     border-right: 1px solid #eee;
+}
+.bnt-detail-style{
+    float: right;
 }

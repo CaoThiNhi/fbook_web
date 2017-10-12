@@ -1,7 +1,9 @@
 .media-object{
    float: left;
    padding-top: 0px;
+    height: 190px;
 }
+
 .style_list{
   padding-left: 50px;
   padding-top:5px;
@@ -31,4 +33,13 @@ li{
 }
 .list-group-item{
   margin-right:17px;
+}
+.img-style{
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 7px;
+  height: 60px;
+}
+.btn span{
+  opacity: 1;
 }
