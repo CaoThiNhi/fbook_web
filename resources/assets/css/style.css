@@ -108,7 +108,7 @@ input:-webkit-autofill:focus {
 .search-result {
     max-height: 200px;
     overflow: auto;
-    padding-right: 0;
+    padding-right: 15;
 }
 
 #data-search, #data-search-google, #data-suggest-book {
@@ -228,4 +228,28 @@ input:-webkit-autofill:focus {
 
 .notification-p {
     margin-bottom: 0px;
+}
+.avatar{
+    width: 60px;
+    border-radius: 50%;
+}
+.img-style{
+    padding-right: 0px;
+}
+.img-circle-2{
+    border-radius: 0%;
+    height: 75px;
+    width: 50px;
+}
+.list-group-item:hover{
+    background: #eee;
+}
+#data-search li a, #data-search-google li a, #data-suggest-book li a{
+    padding: 0px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+}
+.icon-image{
+    height: 70px;
 }

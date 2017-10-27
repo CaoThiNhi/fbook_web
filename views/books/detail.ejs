@@ -47,9 +47,7 @@
                     <div class="book-details-item">
                         <h4 class="tip-left">Title</h4>
                         <p class="lead"><%= data.item.title %></p>
-                        <div class="space-10"></div>
                         <h4 class="tip-left">Count view: <%= data.item.count_view %></h4>
-                        <div class="space-10"></div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <h4 class="tip-left">Author</h4>
@@ -60,12 +58,11 @@
                                              alt="library">
                                     </div>
                                     <div class="media-body">
-                                        <h5><%= data.item.author ? data.item.author : Framgia %></h5>
+                                        <h5 class="author"><%= data.item.author ? data.item.author : Framgia %></h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="space-30"></div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <h4 class="tip-left">Shared by</h4>
@@ -98,13 +95,10 @@
                                 <% } %>
                             </div>
                         </div>
-                        <div class="space-30"></div>
                         <h4 class="tip-left">Description</h4>
                         <p><%- data.item.description %></p>
-                        <div class="space-20"></div>
                         <h4 class="tip-left">Rating</h4>
                         <input id="rating-book" name="star" class="rating" data-min="0" data-max="5" value=<%= data.item.avg_star %> disabled="true" data-step="0.01" data-size="xs">
-                        <div class="space-20"></div>
                         <h4 class="tip-left">Branch of book :</h4>
                         <p class="text-warning lead"><%- data.item.office.name %></p>
                         <h4 class="tip-left">Activities</h4>
@@ -113,7 +107,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <a href="#user_review" onclick="showTab('#user_review')">
-                                            <span class="badge"><%= data.item.reviews_detail.length %></span> Review
+                                            <span class="badge"><%= data.item.reviews_detail.length %></span><br> Review
                                             <span class="badge"></span></a>
                                     </div>
                                 </div>
@@ -122,7 +116,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <a href="#user_waiting" onclick="showTab('#user_waiting')">
-                                            <span class="badge"><%= data.item.users_waiting.length %></span> Waiting
+                                            <span class="badge"><%= data.item.users_waiting.length %></span><br> Waiting
                                         </a>
                                     </div>
                                 </div>
@@ -131,7 +125,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <a href="#user_reading" onclick="showTab('#user_reading')">
-                                            <span class="badge"><%= data.item.users_reading.length %></span> Reading
+                                            <span class="badge"><%= data.item.users_reading.length %></span><br> Reading
                                         </a>
                                     </div>
                                 </div>
@@ -140,7 +134,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <a href="#user_returning" onclick="showTab('#user_returning')">
-                                            <span class="badge"><%= data.item.users_returning.length %></span> Returning
+                                            <span class="badge"><%= data.item.users_returning.length %></span><br> Returning
                                         </a>
                                     </div>
                                 </div>
@@ -149,7 +143,7 @@
                                 <div class="media">
                                     <div class="media-body">
                                         <a href="#user_returned" onclick="showTab('#user_returned')">
-                                            <span class="badge"><%= data.item.users_returned.length %></span> Returned
+                                            <span class="badge"><%= data.item.users_returned.length %></span><br> Returned
                                         </a>
                                     </div>
                                 </div>
@@ -180,9 +174,9 @@
                                 </button>
                             <% } %>
                             <% if (isCurrentUserOwneredBook) { %>
-                                <button class="btn btn-danger btn-sm remove-owner"><i class="glyphicon glyphicon-remove"></i> Remove owner this book</button>
+                                <button class="btn btn-danger btn-xs remove-owner"><i class="glyphicon glyphicon-remove"></i> Remove owner this book</button>
                             <% } else { %>
-                                <button class="btn btn-primary btn-sm add-owner" data-office-id="<%= data.item.office.id %>"><i class="glyphicon glyphicon-plus"></i> Add owner this book </button>
+                                <button class="btn btn-primary btn-sx add-owner" data-office-id="<%= data.item.office.id %>"><i class="glyphicon glyphicon-plus"></i> Add owner this book </button>
                             <% } %>
                         </div>
                     </div>
@@ -581,3 +575,5 @@
 <link href="/bower/bootstrap-star-rating/css/star-rating.css" rel="stylesheet" type="text/css">
 <link href="/bower/bootstrap-star-rating/css/theme-krajee-fa.css" rel="stylesheet" type="text/css">
 <link href="/bower/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+<link href="/css/detail-book.css" rel="stylesheet" type="text/css">
+

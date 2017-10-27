@@ -46,7 +46,23 @@ function searchBooks() {
 
             if (response.items.total) {
                 response.items.data.forEach(function (book) {
-                    $('#data-search').append('<li><a href="/books/'+ book.id +'">' + book.title + '</a></li>');
+                    $('#data-search').append(
+                        '<li class="list-group-item">' +
+                            "<div class='row'>" +
+                                "<div class='col-md-12'>" +
+                                    "<div class='media-left media-middle col-md-2 img-style'>" +
+                                        "<a href='#'>" +
+                                            "<img class='media-object-2 img-circle-2' src='http://placehold.it/40x40'>" +
+                                        '</a>' +
+                                    '</div>' +
+                                    "<div class='col-md-10' id='center'>" +
+                                        '<p><a href="/books/'+ book.id +'">' + book.title + '</a></p>' +
+                                        '<p>Author #</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</li>'
+                    );
                 });
             } else {
                 $('#data-search').append('<li><a href="#">Not found</a></li>');
@@ -73,7 +89,21 @@ function searchBooksGoogle() {
             if (response.items.length) {
                 response.items.forEach(function (book) {
                     $('#data-search-google').append(
-                        '<li><a target="_blank" href="'+ book.volumeInfo.previewLink + '">' + book.volumeInfo.title + '</a></li>'
+                        '<li class="list-group-item">' +
+                            "<div class='row'>" +
+                                "<div class='col-md-12'>" +
+                                    "<div class='media-left media-middle col-md-2 img-style'>" +
+                                        "<a href='#'>" +
+                                            "<img class='media-object-2  img-circle-2' src='http://placehold.it/40x40'>" +
+                                        '</a>' +
+                                    '</div>' +
+                                    "<div class='col-md-10' id='center'>" +
+                                        '<p><a target="_blank" href="'+ book.volumeInfo.previewLink + '">' + book.volumeInfo.title + '</a></p>' +
+                                        '<p>Author #</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</li>'
                     );
                 });
             } else {
